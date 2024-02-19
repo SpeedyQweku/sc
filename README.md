@@ -12,9 +12,9 @@ go install github.com/SpeedyQweku/sc
 
 ```bash
   -d string
-    	The target inscope domain
+    The target inscope domain
   -l string
-    	The target inscope domains file
+    The target inscope domains file
   -s string
-    	Subdomains file
+    Subdomains file
 ```
