@@ -28,14 +28,16 @@ func main() {
 
 	subdomain_got, err := readLines(cfg.subdomian)
 	if err != nil {
-		panic("Err reading subdomain file")
+		fmt.Printf("%s\n",err)
+		os.Exit(1)
 	}
 
 	var inscope_domain []string
 	if cfg.domainF != "" {
 		inscope_domain, err = readLines(cfg.domainF)
 		if err != nil {
-			panic("Err reading domain file")
+			fmt.Printf("%s\n",err)
+			os.Exit(1)
 		}
 	} else if cfg.domain != "" {
 		inscope_domain = append(inscope_domain, cfg.domain)
