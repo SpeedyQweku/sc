@@ -5,7 +5,7 @@ Use to get inscope subdomain
 ## Installation
 
 ```bash
-go install github.com/SpeedyQweku/sc
+go install github.com/SpeedyQweku/sc@latest
 ```
 
 ## Usage
