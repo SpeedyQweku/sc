@@ -28,7 +28,7 @@ func main() {
 
 	subdomain_got, err := readLines(cfg.subdomian)
 	if err != nil {
-		fmt.Printf("%s\n",err)
+		fmt.Printf("%s\n", err)
 		os.Exit(1)
 	}
 
@@ -36,7 +36,7 @@ func main() {
 	if cfg.domainF != "" {
 		inscope_domain, err = readLines(cfg.domainF)
 		if err != nil {
-			fmt.Printf("%s\n",err)
+			fmt.Printf("%s\n", err)
 			os.Exit(1)
 		}
 	} else if cfg.domain != "" {
@@ -50,7 +50,6 @@ func main() {
 			}
 		}
 	}
-
 }
 
 func readLines(filename string) ([]string, error) {
