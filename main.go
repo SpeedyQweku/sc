@@ -21,6 +21,11 @@ func main() {
 	flag.StringVar(&cfg.subdomian, "s", "", "Subdomains file")
 	flag.Parse()
 
+	if cfg.domainF != "" && cfg.domain != "" {
+		fmt.Println("[\033[31mErr\033[0m] Cant use -l and -d at the same time")
+		os.Exit(1)
+	}
+
 	if (cfg.domainF == "" || cfg.domain == "") && cfg.subdomian == "" {
 		flag.PrintDefaults()
 		os.Exit(1)
